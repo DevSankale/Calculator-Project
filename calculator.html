@@ -4,20 +4,25 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Calculator.</title>
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <button onclick="Calculation+='1';
-  console.log(`${Calculation}`)
-  ">1</button>
-  <button onclick="
-  Calculation= Calculation+'2';
-  console.log(`${Calculation}`);
-">2</button>
-  <button   onclick="Calculation= Calculation+'3';
-  console.log(`${Calculation}`);
-">3</button>
-  <button onclick="Calculation= Calculation + ' + ';
-  console.log(`${Calculation}`)">+</button>
+<div class="display">screen.</div>
+<div class="container">
+  <p>
+      <button onclick="Calculation+='1';
+      console.log(`${Calculation}`)
+      ">1</button>
+      <button onclick="
+      Calculation= Calculation+'2';
+      console.log(`${Calculation}`);
+    ">2</button>
+      <button   onclick="Calculation= Calculation+'3';
+      console.log(`${Calculation}`);
+    ">3</button>
+      <button class="operator" onclick="Calculation= Calculation + ' + ';
+      console.log(`${Calculation}`)">+</button>
+  </p>
   <p>
     <button onclick="Calculation= Calculation+'4';
     console.log(`${Calculation}`)";>4</button>
@@ -25,7 +30,10 @@
     console.log(`${Calculation}`)";>5</button>
     <button onclick="Calculation= Calculation+'6';
     console.log(`${Calculation}`);">6</button>
-    <button>-</button>
+    <button class="operator" onclick="Calculation=Calculation + ' - ';
+    console.log(`${Calculation}`);
+    
+    ">-</button>
     </p>
     <p>
     <button onclick="Calculation= Calculation+'7';
@@ -33,20 +41,20 @@
     console.log(`${Calculation}`);">8</button> 
     <button onclick="Calculation= Calculation+'9';
     console.log(`${Calculation}`);">9</button>
-    <button onclick="Calculation= eval(Calculation);
+    <button class="operator" onclick="Calculation= eval(Calculation);
     console.log(`${Calculation}`);">=</button>
     </p>
     <p>
       <button onclick="Calculation= Calculation+'0';
       console.log(`${Calculation}`);">0</button>  
-      <button onclick="
+      <button class="operator" onclick="
       Calculation=Calculation + ' * ';
       console.log(`${Calculation}`);">*</button>
-      <button onclick="Calculation=Calculation + ' / ';
+      <button class="operator" onclick="Calculation=Calculation + ' / ';
       console.log(`${Calculation}`);">/</button>
-      <button onclick="Calculation='';
+      <button class="operator" onclick="Calculation='';
       console.log(`${Calculation}`);">C</button>
-      <button onclick="Calculation=Calculation+'.';
+      <button class="operator" onclick="Calculation=Calculation+'.';
       console.log(`${Calculation}`)">.</button>
     </p>
     <p>
@@ -56,5 +64,6 @@
 
     let Calculation = '';
   </script>
+</div>
 </body>
 </html>
