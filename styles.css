@@ -41,3 +41,6 @@ button:hover{
 .operator{
     background-color: gray;
 }
+#owner{
+   padding:5px;
+}
