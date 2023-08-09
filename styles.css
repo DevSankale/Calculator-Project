@@ -1,28 +1,30 @@
-body{
+ 
+.bigcontainer{
     display:flex;
     flex-direction: column;
-    flex:1;
-    padding:5px;
-    border: 3px solid black;
+    align-items: start;
+    border: 1px solid black;
+    justify-content: start;
     background-color: white;
+    width:180px;
+    
 }
 .container{
     display:flex;
     flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    background-color: black;
-    padding:5px;
+    align-items: start;
+    justify-content: start;
+    padding:5px; 
+    border-radius: 5px; 
+    background-color: white; 
     
-    
-}
-.display{
-    border:1px solid gray;
-    border-radius:5px 0;
-    padding:10px;
-    background-color: white;
 }
 
+.display{
+    
+    padding: 10px;
+    background-color: white;
+}
 button{
     border-radius:10px;
     cursor: pointer;
