@@ -1,65 +1,48 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Calculator</title>
   <link rel="stylesheet" href="styles.css">
 </head>
+
 <body>
   <p id="owner">JSK CALCULATOR.</p>
- <div class="bigcontainer">
-  <div class="display" id="calculatorDisplay">0</div>
-  <div class="container">
-    <p>
-      <button onclick="appendToCalculation('1')">1</button>
-      <button onclick="appendToCalculation('2')">2</button>
-      <button onclick="appendToCalculation('3')">3</button>
-      <button class="operator" onclick="appendToCalculation(' + ')">+</button>
-    </p>
-    <p>
-      <button onclick="appendToCalculation('4')">4</button>
-      <button onclick="appendToCalculation('5')">5</button>
-      <button onclick="appendToCalculation('6')">6</button>
-      <button class="operator" onclick="appendToCalculation(' - ')">-</button>
-    </p>
-    <p>
-      <button onclick="appendToCalculation('7')">7</button>
-      <button onclick="appendToCalculation('8')">8</button>
-      <button onclick="appendToCalculation('9')">9</button>
-      <button class="operator" onclick="calculate()">=</button>
-    </p>
-    <p>
-      <button onclick="appendToCalculation('0')">0</button>
-      <button class="operator" onclick="appendToCalculation(' * ')">*</button>
-      <button class="operator" onclick="appendToCalculation(' / ')">/</button>
-      <button class="operator" onclick="clearDisplay()">C</button>
-      <button class="operator" onclick="appendToCalculation('.')">.</button>
-    </p>
+  <div class="bigcontainer">
+    <div class="display" id="calculatorDisplay">0</div>
+    <div class="container">
+      <p>
+        <button onclick="appendToCalculation('1')">1</button>
+        <button onclick="appendToCalculation('2')">2</button>
+        <button onclick="appendToCalculation('3')">3</button>
+        <button class="operator" onclick="appendToCalculation(' + ')">+</button>
+      </p>
+      <p>
+        <button onclick="appendToCalculation('4')">4</button>
+        <button onclick="appendToCalculation('5')">5</button>
+        <button onclick="appendToCalculation('6')">6</button>
+        <button class="operator" onclick="appendToCalculation(' - ')">-</button>
+      </p>
+      <p>
+        <button onclick="appendToCalculation('7')">7</button>
+        <button onclick="appendToCalculation('8')">8</button>
+        <button onclick="appendToCalculation('9')">9</button>
+        <button class="operator" onclick="calculate()">=</button>
+      </p>
+      <p>
+        <button onclick="appendToCalculation('0')">0</button>
+        <button class="operator" onclick="appendToCalculation(' * ')">*</button>
+        <button class="operator" onclick="appendToCalculation(' / ')">/</button>
+        <button class="operator" onclick="clearDisplay()">C</button>
+        <button class="operator" onclick="appendToCalculation('.')">.</button>
+      </p>
+    </div>
+    <script src="calculator.js">
+
+    </script>
   </div>
-  <script>
-    let Calculation = '';
-    const displayElement = document.getElementById('calculatorDisplay');
-
-    function appendToCalculation(value) {
-      Calculation += value;
-      displayElement.textContent = Calculation;
-    }
-
-    function calculate() {
-      try {
-        Calculation = eval(Calculation);
-        displayElement.textContent = Calculation;
-      } catch (error) {
-        displayElement.textContent = 'Error';
-      }
-    }
-
-    function clearDisplay() {
-      Calculation = '';
-      displayElement.textContent = '0';
-    }
-  </script>
-</div>
 </body>
+
 </html>
